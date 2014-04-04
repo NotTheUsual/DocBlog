@@ -1,4 +1,6 @@
 DocBlog::Application.routes.draw do
+
+  get 'posts/new' => 'posts#new', as: :new_post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
