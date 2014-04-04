@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+  def admin_index
+
+  end
+  
   def new
     @post = "post"
   end
