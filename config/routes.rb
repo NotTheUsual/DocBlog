@@ -1,5 +1,7 @@
 DocBlog::Application.routes.draw do
 
+  root 'posts#index'
+
   get 'posts' => 'posts#admin_index', as: :posts
   get 'posts/new' => 'posts#new', as: :new_post
   post 'posts' => 'posts#create'

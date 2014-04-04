@@ -11,3 +11,9 @@ Feature: Blog Posts
   Scenario: Adding two posts
     When I upload two docs
     Then I should see both titles in the posts index
+
+  Scenario: Viewing content
+    Given I am on the new post page
+    And I have uploaded a new doc
+    When I visit the homepage
+    Then I should see the text of the doc

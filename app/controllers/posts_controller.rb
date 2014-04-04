@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+  def index
+
+  end
+
   def admin_index
     @posts = Post.all
   end
@@ -8,7 +12,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.upload("nothing yet")
+    title = params[:post][:doc].original_filename
+    Post.upload(title)
     redirect_to new_post_path
   end
 end
