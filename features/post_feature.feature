@@ -7,3 +7,7 @@ Feature: Blog Posts
     Given I am on the new post page
     When I upload a new doc
     Then I should see the title of that post in the posts index
+
+  Scenario: Adding two posts
+    When I upload two docs
+    Then I should see both titles in the posts index

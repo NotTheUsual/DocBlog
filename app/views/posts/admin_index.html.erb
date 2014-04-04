@@ -1,1 +1,5 @@
-<p>Blog Post 1</p>
+<ul>
+  <% @posts.each_with_index do |post, i| %>
+    <li><%= post.title + " #{i + 1}" %></li>
+  <% end %>
+</ul>
