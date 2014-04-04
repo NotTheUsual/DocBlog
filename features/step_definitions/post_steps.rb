@@ -32,5 +32,5 @@ Then(/^I should see both titles in the posts index$/) do
 end
 
 Then(/^I should see the text of the doc$/) do
-  expect(page).to have_content("Dear diary, I want to create a blog and haven’t been able to find anything satisfactory. Can you help?")
+  expect(page).to have_content("Dear diary, I want to create a blog and haven't been able to find anything satisfactory. Can you help?")
 end
