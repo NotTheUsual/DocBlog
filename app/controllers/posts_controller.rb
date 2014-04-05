@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.map do |post|
-      HTML::Pipeline::MarkdownFilter.new(post.body).call
-    end
+    @posts = all_posts_as_html
   end
 
   def admin_index
@@ -16,8 +14,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    doc = params[:post][:doc]
-    Post.upload(doc)
+    Post.upload(params[:post][:doc])
     redirect_to posts_path
+  end
+
+  private
+
+  def all_posts_as_html
+    Post.all.map { |post| Converter.to_html(post) }
   end
 end
