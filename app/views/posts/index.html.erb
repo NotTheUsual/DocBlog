@@ -1,7 +1,12 @@
+<header>
+  <h1>DocBlog</h1>
+</header>
 <ul>
   <% @posts.each do |post| %>
     <li>
-      <%= post.html_safe %>
+      <article class="post">
+        <%= post.html_safe %>
+      </article>
     </li>
   <% end %>
 </ul>

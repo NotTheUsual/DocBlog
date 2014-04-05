@@ -1,0 +1,80 @@
+@import 'variables'
+
+*
+  box-sizing: border-box
+
+body
+  background-color: $public-body
+  font-size: 100%
+  
+  &.admin
+    background-color: $admin-body
+
+img
+  display: none
+  
+main > header
+  width: 100%
+  background-color: $header-color
+  padding: 1em
+  margin-bottom: 1em
+  
+  h1
+    text-align: center
+    font-size: 2em
+    color: #fff
+  
+.main-content
+  background-color: $main-bg-color
+  max-width: 65%
+  margin: 1em auto
+  padding: 1em
+  
+.main-form
+  background-color: $main-bg-color
+  max-width: 65%
+  margin: 1em auto
+  padding: 1em
+  
+table.post-titles
+  width: 100%
+
+  th
+    font-weight: 600
+    padding-bottom: 0.75em
+  
+  td
+    padding-bottom: 0.5em
+    
+  th:first-child, td:first-child
+    width: 75%
+    text-align: left
+    
+  th:last-child, td:last-child
+    width: 25%
+    text-align: left
+    
+.post
+  background-color: $main-bg-color
+  max-width: 65%
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 1em
+  padding: 1em
+  border-radius: 3px
+  
+  h1
+    font-size: 1.5em
+    font-weight: 600
+    margin-bottom: 0.75em
+    
+  h2
+    font-size: 1.1em
+    font-weight: 600
+    
+  p
+    line-height: 1.2em
+    margin: 1em 0
+    
+  hr
+    border: 1px solid $public-body

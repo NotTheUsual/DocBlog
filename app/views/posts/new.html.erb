@@ -1,5 +1,7 @@
-<%= form_for @post, :html => { :multipart => true }, url: {action: "create"} do |form| %>
-  <%= form.label :doc %>
-  <%= form.file_field :doc %>
-  <%= form.submit 'Upload', class: 'button' %>
-<% end %>
+<section class="main-form">
+  <%= form_for @post, :html => { :multipart => true }, url: {action: "create"} do |form| %>
+    <%= form.label :doc %>
+    <%= form.file_field :doc %>
+    <%= form.submit 'Upload', class: 'button' %>
+  <% end %>
+</section>
