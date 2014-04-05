@@ -17,3 +17,4 @@ Feature: Blog Posts
     And I have uploaded a new doc
     When I visit the homepage
     Then I should see the text of the doc
+    And it should be formatted correctly

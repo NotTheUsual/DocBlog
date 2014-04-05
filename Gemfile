@@ -29,6 +29,11 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'word-to-markdown', '~> 0.2.0'
 
+# Filter gem dependencies are not bundled; you must bundle the filter's gem dependencies
+# https://github.com/jch/html-pipeline#dependencies
+gem 'html-pipeline'
+gem 'github-markdown'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.map do |post|
+      HTML::Pipeline::MarkdownFilter.new(post.body, :gfm => false).call
+    end
   end
 
   def admin_index
