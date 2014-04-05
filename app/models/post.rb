@@ -12,4 +12,8 @@ class Post < ActiveRecord::Base
     post.body = wtm_doc.to_s
     post.save
   end
+
+  def date
+    created_at.strftime("%d/%m/%y")
+  end
 end

@@ -1,7 +1,12 @@
-<ul>
-  <% @posts.each_with_index do |post, i| %>
-    <li>
-      <h1><%= post.title %></h1>
-    </li>
+<table>
+  <tr>
+    <th>Post Title</th>
+    <th>Date</th>
+  </tr>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.date %></td>
+    </tr>
   <% end %>
-</ul>
+</table>

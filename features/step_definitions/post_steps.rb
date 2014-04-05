@@ -35,6 +35,10 @@ Then(/^I should see the text of the doc$/) do
   expect(page).to have_content("Dear diary, I want to create a blog and haven't been able to find anything satisfactory. Can you help?")
 end
 
+Then(/^I should see the date that post was created$/) do
+  expect(page).to have_content(Time.now.strftime("%d/%m/%y"))
+end
+
 Then(/^it should be formatted correctly$/) do
   expect(page).not_to have_content("#")
 end
