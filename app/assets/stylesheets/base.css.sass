@@ -12,6 +12,20 @@ body
 
 img
   display: none
+    
+h1
+  font-size: 2em
+  font-weight: bold
+  margin-bottom: 0.5em
+
+h2
+  font-size: 1.5em
+  font-weight: bold
+  margin: 1em 0 1rem
+    
+p
+  line-height: 1.2em
+  margin: 1em 0
   
 main > header
   width: 100%
@@ -23,6 +37,69 @@ main > header
     text-align: center
     font-size: 2em
     color: #fff
+    
+main > header.new-post-header
+  width: 90%
+  display: flex
+  margin: 2em auto
+  padding: 0
+  
+  .page-title
+    background-color: rgba(255, 255, 255, 0.2)
+    color: #fff
+    font-size: 4em
+    font-family: 'Helvetica Neue', sans-serif
+    font-weight: bold
+    font-style: italic
+    padding: 0.7em
+    display: block
+    margin-right: 0.5em
+    margin-bottom: 0
+    text-align: left
+    flex: 1 75%
+    
+  .dropzone-container
+    background-color: #02ad39
+    flex: 1 25%
+    
+    .dropzone
+      padding: 0
+      text-align: center
+      overflow: hidden
+      
+      .dz-preview
+        margin: 0.5em
+
+.dz-message 
+  padding: 2.75em 2em
+  color: #fff
+  
+  span
+    font-size: 2em
+
+.doc-review
+  width: 90%
+  display: flex
+  margin: 1em auto
+  
+  .review-form
+    flex: 1 50%
+    margin-right: 2em
+    background-color: $main-bg-color
+    
+    textarea
+      width: 100%
+      max-width: 100%
+      min-height: 500px
+      font-size: 1rem
+      padding: 2em
+      font-family: courier
+      border: none
+    
+  .review-output
+    flex: 1 50%
+    background-color: $main-bg-color
+    padding: 2em
   
 .main-content
   background-color: $main-bg-color
