@@ -9,13 +9,21 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = "post"
+    @post = Post.new
     render layout: 'admin'
   end
 
   def create
     Post.upload(params[:post][:doc])
     redirect_to posts_path
+  end
+
+  def convert
+    doc = params[:file]
+    wtm_doc = WordToMarkdown.new(doc.read.force_encoding('utf-8'))
+    string = '{ "post": { "body": "' + wtm_doc.to_s + '" } }'
+    json = string.gsub(/\n/, '\\n').to_json
+    render json: json
   end
 
   private

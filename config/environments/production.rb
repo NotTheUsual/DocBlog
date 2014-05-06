@@ -44,6 +44,7 @@ DocBlog::Application.configure do
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
+  config.assets.js_compressor = Uglifier.new(mangle: false)
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]

@@ -1,7 +1,20 @@
-<section class="main-form">
-  <%= form_for @post, :html => { :multipart => true }, url: {action: "create"} do |form| %>
-    <%= form.label :doc %>
-    <%= form.file_field :doc %>
-    <%= form.submit 'Upload', class: 'button' %>
-  <% end %>
-</section>
+<main ng-app="previewApp" ng-controller="PostCtrl">
+  <header>
+    <h1 class="page-title">New Blog Post</h1>
+    <section class="main-form">
+      <%= form_tag({controller: 'posts', action: 'convert'}, id: 'post-dropzone', class: 'dropzone', multipart: true, 'drop-zone' => '') do %>
+      <% end %>
+    </section>
+  </header>
+
+  <section class="main-form" ng-show="output !== ''">
+    <%= form_for @post do |form| %>
+      <%= form.text_area :body, 'ng-model' => 'output' %>
+      <%= form.submit 'Accept' %>
+    <% end %>
+  </section>
+
+  <section class="main-form preview" ng-show="output !== ''">
+    <div ng-bind-html="output | markdown"></div>
+  </section>
+</main>

@@ -34,6 +34,8 @@ gem 'word-to-markdown', '~> 0.2.0'
 gem 'html-pipeline'
 gem 'github-markdown'
 
+gem 'dropzonejs-rails'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

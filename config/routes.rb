@@ -4,6 +4,7 @@ DocBlog::Application.routes.draw do
 
   get 'posts' => 'posts#admin_index', as: :posts
   get 'posts/new' => 'posts#new', as: :new_post
+  post 'posts/convert' => 'posts#convert'
   post 'posts' => 'posts#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
