@@ -27,7 +27,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'word-to-markdown', '~> 0.2.0'
+gem 'word-to-markdown', '~> 1.0.0'
 
 # Filter gem dependencies are not bundled; you must bundle the filter's gem dependencies
 # https://github.com/jch/html-pipeline#dependencies
