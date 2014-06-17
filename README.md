@@ -2,7 +2,7 @@
 
 Simple blog, made to remind myself that I can still code Rails apps. Uses [Ben Balter's Word To Markdown gem](https://github.com/benbalter/word-to-markdown) to allow you to blog from Word (roughly).
 
-There's not much on the Master branch yet, but the Develop branch has a nice implementation, with a terrible UI. The posts branch is where I'm trying to update the Word To Markdown Gem.
+There's not much on the Master branch yet, but the Posts branch has a nice implementation, with a terrible UI. Unfortunately also where I'm trying to update the Word To Markdown Gem.
 
 ### Angular
 
