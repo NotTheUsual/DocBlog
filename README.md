@@ -10,4 +10,4 @@ The Angular branch has an implementation of the upload window using Angular JS. 
 
 ---
 
-This is obviously a work in progress/when I have time for it thing. Always nice to have something to tinker with.
+This is obviously a work in progress/when I have time for it thing. Always nice to have something to tinker with in the background.
